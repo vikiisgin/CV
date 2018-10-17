@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Resume_Gin Wu</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<style>
+		.wrap{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+		.left,.right{
+			width: 50%;
+			height: 1000px;
+			background-color: #f0f0f0;
+		}
+        @media only screen and (max-width: 767px){
+            .wrap{
+                flex-direction: column;
+            }
+            .left,.right{
+                width: 100%;
+            }
+        }
+		.left .img{
+			width: 150px;
+			height: 150px;
+			margin: auto;
+		}
+		.left .img img{
+            width: 100%;
+            object-fit: cover;/* 維持原比例填滿,剪裁掉部分 */
+            height: 150px;
+            border-radius: 75px;
+		}
+        .left .photo {
+        	text-align: center;
+        }
+        .photo{
+        	padding: 50px;
+        }
+        .up_name{
+            font-size: 35px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .eng_name{
+            font-size: 25px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact{
+            text-align: center;
+            font-size: 20px;
+            color: #46a3ff;
+        }
+        .contact_email,.contact_phone{
+            margin-left: 185px;
+            text-align: left;
+        }
+        .language,.skill{
+            margin-top: 30px;
+            font-size: 20px;
+            color: #46a3ff;
+        }
+        .chinese,.english{
+            margin-left:160px;
+            text-align: left;
+        }
+        .chi_number,.eng_number{
+            margin-right: 170px;
+            text-align: right;
+        }
+        .chi_abilityouter,.eng_abilityouter{
+        	width: 200px;
+        	height: 20px;
+        	position: relative;
+        	background-color: #fff ;
+        	border-radius: 16px;
+        	border: 1px solid #000;
+            margin:auto ;
+            
+        }
+        .chi_abilityinner{
+        	width: 190px;
+        	height: 14px;
+        	position: absolute;
+        	left: 4px;
+        	top: 2px;
+        	background-color: #ffdc35;
+        	border-radius: 8px;
+        	border: 1px solid #000; 
+        }
+        .eng_abilityinner{
+            width: 60%;
+            height: 14px;
+            position: absolute;
+            left: 4px;
+            top: 2px;
+            background-color: #ffdc35;
+            border-radius: 8px;
+            border: 1px solid #000;
+        }
+        .html_icon{
+            border: solid 3px;
+            line-height: 50px;
+            width: 50px;
+            height: 50px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-left: 237px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .html_outer,.css_outer{
+            width: 200px;
+            height: 20px;
+            position: relative;
+            background-color: #fff ;
+            border-radius: 16px;
+            border: 1px solid #000;
+            margin: 10px auto;
+        }
+        .html_inner,.css_inner{
+            width: 33%;
+            height: 14px;
+            position: absolute;
+            left: 4px;
+            top: 2px;
+            background-color: #ffdc35;
+            border-radius: 8px;
+            border: 1px solid #000;
+        }
+        .htmlinn01{
+            position: absolute;
+            border: dashed 1px;
+            border-left: none;
+            border-top: none;
+            border-bottom: none;
+            width: 33%;
+            height: 20px;
+        }
+        .htmlinn02{
+            position: absolute;
+            border: dashed 1px;
+            border-left: none;
+            border-top: none;
+            border-bottom: none;
+            width: 66%;
+            height: 20px;
+        }
+        .html_word{
+            margin-left: 30px;
+            display: inline;
+            font-size: 12px;
+        }
+        .css_icon{
+            border: solid 3px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-left: 237px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .cssinn01{
+            position: absolute;
+            border: dashed 1px;
+            border-left: none;
+            border-top: none;
+            border-bottom: none;
+            width: 33%;
+            height: 20px;
+        }
+        .cssinn02{
+            position: absolute;
+            border: dashed 1px;
+            border-left: none;
+            border-top: none;
+            border-bottom: none;
+            width: 66%;
+            height: 20px;
+        }
+        .css_word{
+            margin-left: 30px;
+            display: inline;
+            font-size: 12px;
+        }
+        .school{
+            font-size: 30px;
+            text-align: center;
+            margin-top: 100px;
+            color: #46a3ff;
+        }
+        .collage{
+            font-size: 20px;
+            margin-left: 150px;
+            text-align: left;
+            margin-top: 50px;
+        }
+        .job{
+            font-size: 30px;
+            text-align: center;
+            margin-top: 50px;
+            color: #46a3ff;
+        }
+        .job01{
+            font-size: 20px;
+            margin-left: 60px;
+            margin-top: 20px;
+        }
+        .job_content01{
+            line-height: 30px;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        .job02{
+            font-size: 20px;
+            margin-left: 60px;
+        }
+        .job_content02{
+            line-height: 30px;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        .end{
+            font-family: Helvetica;
+            font-weight: bold;
+            font-size: 50px;
+            color: #BABABA;
+            letter-spacing: 2px;
+            margin-top: 100px;
+            margin-left: 250px;
+            white-space: nowrap;
+        }
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="left">
+			<div class="photo">
+				<div class="img"><img src="https://images.cakeresume.com/vikiisgin/193e8fbf-4d0d-4e04-948e-9cf64c77343e.png" alt="photo">
+			</div>
+            <!-- 左名字 -->
+			<div class="up_name">吳宗錦<div class="eng_name">Gin Wu</div></div>
+            <!-- 左聯絡方式 -->
+            <div class="contact">聯絡資訊</div><hr width="200px">
+            <div class="contact_email"><i class="fas fa-envelope-square"></i> vikiisgin@gmail.com</div>
+            <div class="contact_phone"><i class="fas fa-phone"></i> +886 921602679</div>
+            <!-- 左語言 -->
+            <div class="language">語言</div><hr width="200px">
+            <!-- 左語言中文 -->
+            <div class="chinese">中文</div>
+			<div class="chi_abilityouter"><div class="chi_abilityinner"></div></div>
+            <div class="chi_number">100/100</div>
+            <!-- 左語言英文 -->
+            <div class="english">英文</div>
+            <div class="eng_abilityouter"><div class="eng_abilityinner"></div></div>
+            <div class="eng_number">60/100</div>
+            <!-- 左技能 -->
+            <div class="skill">技能</div><hr width="200px">
+            <!-- 左技能HTML -->
+            <div class="html_icon">HTML</div>
+            <div class="html_outer">
+                <!-- 左技能HTML_inner -->
+                <div class="htmlinn01"></div>
+                <div class="htmlinn02"></div>
+                <div class="html_inner"></div>
+            </div>
+            <!-- 左技能HTML程度 -->
+                <div class="html_word">初階</div>
+                <div class="html_word">熟練</div>
+                <div class="html_word">精通</div>
+            <!-- 左技能CSS -->
+            <div class="css_icon">CSS</div>
+            <div class="css_outer">
+                <!-- 左技能CSS_inner -->
+                <div class="cssinn01"></div>
+                <div class="cssinn02"></div>
+                <div class="css_inner"></div>
+            </div>
+            <!-- 左技能CSS程度 -->
+                <div class="css_word">初階</div>
+                <div class="css_word">熟練</div>
+                <div class="css_word">精通</div>
+			</div>
+		</div>
+        <!-- 左邊結束 -->
+		<div class="right">
+            <!-- 右學歷 -->
+			   <div class="school">學歷</div><hr width="450px">
+            <!-- 右學歷大學 -->
+               <div class="collage">2004 - 2008 / 大學<br />
+               私立中國文化大學 生命科學系</div> 
+            <!-- 右工作經歷 -->
+               <div class="job">經歷</div><hr width="450px">
+            <!-- 右工作經歷01 -->
+               <div class="job01"><ul><li>研究助理 / 台大醫院 2009年8月 - 2018年9月</li></ul></div>    
+            <!-- 右工作內容01 -->
+               <div class="job_content01">動物實驗相關；投藥技術：IP、IV、SC；<br />採血技術、收集器官組織...等；<br />外科手術縫紉技術、動物之動靜脈、氣管插管建立；分生實驗技術ELISA。<br />細菌培養、無菌操作技術或無菌處理手法、撰寫研究紀錄、切片技術、實驗數據分析判讀與整理、一般行政事務、帳務管理。</div>  
+               
+            <!-- 右工作經歷02 -->
+               <div class="job02"><ul><li>行政助理 / 台灣大學 2008年8月 - 2009年7月</li></ul></div>
+            <!-- 右工作內容02 -->
+               <div class="job_content02">行政業務、帳務處理、資料整理等。</div>
+               <div class="end">MADE BY GIN</div>
+		</div>
+	</div>
+</body>
+</html>
